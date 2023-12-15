@@ -9,9 +9,46 @@
   <link rel="stylesheet" href="app.css">
   <title>Google-Inspired To-Do List App</title>
 </head>
-<body>
-
-<div id="app"></div>
+<body class="colorful-bg">
+    <div class="container">
+        <header class="text-center mt-3 bg-dark">
+          <h1 class="app-title text-uppercase font-weight-bold display-5 text-white">Google-Inspired To-Do List</h1>
+        </header>
+      
+        <div id="app" class="todo-app row justify-content-center">
+          <div class="col-9">
+            <section class="schedule bg-secondary rounded p-3 mb-3">
+              <!-- Schedule Section Content -->
+            </section>
+      
+            <section class="row">
+              <div class="col-9">
+                <section class="tasks bg-light rounded p-3 mb-3">
+                  <!-- Tasks Section Content -->
+                </section>
+              </div>
+      
+              <div class="col-9">
+                <section class="reminder-tunes bg-secondary rounded p-3 mb-3">
+                  <!-- Reminder Tunes Section Content -->
+                </section>
+              </div>
+            </section>
+      
+            <section class="user-notes bg-secondary text-white rounded p-3 mb-3">
+              <h2 class="text-center col-9 mb-3">User Notes</h2>
+              <div class="note-container">
+                <input type="text" id="noteTitle" class="form-control col-9 mb-2" placeholder="Note Title...">
+                <textarea id="noteContent" class="form-control" placeholder="Add your notes..."></textarea>
+              </div>
+            </section>
+          </div>
+        </div>
+      
+        <footer class="text-center mt-3 bg-dark text-white">
+          <p>© 2023 Keith O. Onyango</p>
+        </footer>
+      </div>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
