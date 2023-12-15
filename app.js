@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const currentDate = new Date();
     let selectedDate = currentDate;
     let tasks = [];
@@ -110,32 +110,30 @@ $(document).ready(function() {
     };
   
     const formatDate = (date) => {
-      const options = { weekday: 'long',
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       return date.toLocaleDateString('en-US', options);
-  };
-
-  const updateTaskTime = (time) => {
-    tasks[tasks.length - 1].time = time;
+    };
+  
+    const updateTaskTime = (time) => {
+      tasks[tasks.length - 1].time = time;
+      renderLists();
+    };
+  
+    const clearTaskTime = () => {
+      tasks[tasks.length - 1].time = '';
+      renderLists();
+    };
+  
+    const updateReminderTime = (time) => {
+      reminders[reminders.length - 1].time = time;
+      renderLists();
+    };
+  
+    const clearReminderTime = () => {
+      reminders[reminders.length - 1].time = '';
+      renderLists();
+    };
+  
     renderLists();
-  };
-
-  const clearTaskTime = () => {
-    tasks[tasks.length - 1].time = '';
-    renderLists();
-  };
-
-  const updateReminderTime = (time) => {
-    reminders[reminders.length - 1].time = time;
-    renderLists();
-  };
-
-  const clearReminderTime = () => {
-    reminders[reminders.length - 1].time = '';
-    renderLists();
-  };
-
-  renderLists();
-});
-
+  });
   
